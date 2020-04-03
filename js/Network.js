@@ -7,11 +7,11 @@
 
     // https://api.ipregistry.co/?key=z570cdqo1k8fvj&fields=location.continent.name,location.country.name,location.region.name,locat
     $.getJSON("https://api.ipregistry.co/?key=z570cdqo1k8fvj&fields=ip,type,hostname,connection.domain,connection.organization", function (data) {
-        if (data.status) {
             downlink.innerHTML = "Download Speed: " + networkInfo.downlink + "MB/S";
             effectiveType.innerHTML = "Relative Connection Type: " + networkInfo.effectiveType;
             rtt.innerHTML = "Round-Trip Time: " + networkInfo.rtt + "ms";
 
+        if (data.ip != "");
             var ip = document.getElementById("ip");
             var ipType = document.getElementById("ipType");
             var hostname = document.getElementById("hostname");

@@ -21,7 +21,7 @@
             ipType.innerHTML = "IP Version:" + data.type;
             hostname.innerHTML = "Hostname: " + data.hostname;
             domain.innerHTML = "ISP Domain: " + data.connection.domain;
-            org.innerHTML = "ISP Organisation" + data.connection.organization;
+            org.innerHTML = "ISP Organisation:  + data.connection.organization;
 
         } else {
             var failure = document.getElementById("failure");

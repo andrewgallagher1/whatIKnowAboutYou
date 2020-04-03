@@ -1,6 +1,6 @@
 (function(){
-    
-    $.getJSON("https:api.ipregistry.co/userAgent?key=z570cdqo1k8fvj&fields=location.continent.name,location.country.name,location.region.name,location.city,location.latitude,location.longitude", function (data) {
+   // &fields=location.continent.name,location.country.name,location.region.name,location.city,location.latitude,location.longitude
+    $.getJSON("https://api.ipregistry.co/user_agent?key=z570cdqo1k8fvj&fields=location.continent.name,location.country.name,location.region.name,location.city,location.latitude,location.longitude", function (data) {
         var status = data.status;
         if (status == "success") {
             var continent = document.getElementById("continent");

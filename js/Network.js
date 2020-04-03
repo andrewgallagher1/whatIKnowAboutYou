@@ -5,7 +5,7 @@
     var effectiveType = document.getElementById("effectiveType");
     var rtt = document.getElementById("rtt");
 
-    $.getJSON("http://ip-api.com/json?fields=status,query,isp,org", function (data) {
+    $.getJSON("https://ip-api.com/json?fields=status,query,isp,org", function (data) {
         if (data.status) {
             downlink.innerHTML = "Download Speed: " + networkInfo.downlink + "MB/S";
             effectiveType.innerHTML = "Relative Connection Type: " + networkInfo.effectiveType;

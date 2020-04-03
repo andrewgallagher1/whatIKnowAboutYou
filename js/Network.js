@@ -5,18 +5,23 @@
     var effectiveType = document.getElementById("effectiveType");
     var rtt = document.getElementById("rtt");
 
-    $.getJSON("https://ip-api.com/json?fields=status,query,isp,org", function (data) {
+    // https://api.ipregistry.co/?key=z570cdqo1k8fvj&fields=location.continent.name,location.country.name,location.region.name,locat
+    $.getJSON("https://api.ipregistry.co/?key=z570cdqo1k8fvj&fields=ip,type,hostname,connection.domain,connection.organization", function (data) {
         if (data.status) {
             downlink.innerHTML = "Download Speed: " + networkInfo.downlink + "MB/S";
             effectiveType.innerHTML = "Relative Connection Type: " + networkInfo.effectiveType;
             rtt.innerHTML = "Round-Trip Time: " + networkInfo.rtt + "ms";
 
             var ip = document.getElementById("ip");
-            var isp = document.getElementById("isp");
+            var ipType = document.getElementById("ipType");
+            var hostname = document.getElementById("hostname");
+            var domain = document.getElementById("domain")
             var org = document.getElementById("org");
-            ip.innerHTML = "IP Address: " + data.query;
-            isp.innerHTML = "ISP: " + data.isp;
-            org.innerHTML = "ISP Organisation" + data.org;
+            ip.innerHTML = "IP Address: " + data.ip;
+            ipType.innerHTML = "IP Version:" + data.type;
+            hostname.innerHTML = "Hostname: " + data.hostname;
+            domain.innerHTML = "ISP Domain: " + data.connection.domain;
+            org.innerHTML = "ISP Organisation" + data.connection.organization;
 
         } else {
             var failure = document.getElementById("failure");

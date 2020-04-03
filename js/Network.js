@@ -11,7 +11,7 @@
             effectiveType.innerHTML = "Relative Connection Type: " + networkInfo.effectiveType;
             rtt.innerHTML = "Round-Trip Time: " + networkInfo.rtt + "ms";
 
-        if (data.ip != "");
+        if (data.ip != "") {
             var ip = document.getElementById("ip");
             var ipType = document.getElementById("ipType");
             var hostname = document.getElementById("hostname");

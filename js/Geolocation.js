@@ -1,6 +1,6 @@
 (function(){
     
-    $.getJSON("http://ip-api.com/json?fields=status,continent,country,regionName,city,lat,lon", function (data) {
+    $.getJSON("https:api.ipregistry.co/userAgent?key=z570cdqo1k8fvj&fields=location.continent.name,location.country.name,location.region.name,location.city,location.latitude,location.longitude", function (data) {
         var status = data.status;
         if (status == "success") {
             var continent = document.getElementById("continent");

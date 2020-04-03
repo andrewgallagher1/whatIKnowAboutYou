@@ -25,4 +25,8 @@
 
     });
 
+    if (document.getElementById("continent") == "" && document.getElementById("failed") == "") {
+        document.getElementById("failed") = "Cannot determine Geolocation."
+    }
+
 })();

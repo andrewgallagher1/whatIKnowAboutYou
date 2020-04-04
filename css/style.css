@@ -15,13 +15,13 @@ body {
 }
 
 .block {
-    border: 1px black;
+    border: 5px black;
     box-shadow: 5px 5px 10px 5px lightgrey;
     max-width: 600px;
     margin: auto;
     padding: 20px;
     margin: 30px;
-    background-color: lightgrey;
+    background-color: rgba(255, 255, 255, 0.945);
 }
 
 .sub_heading {

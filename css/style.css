@@ -25,6 +25,11 @@ body {
 
 }
 
+.block_content {
+    max-width: 100%;
+
+}
+
 .sub_heading {
     width: 300px;
 }

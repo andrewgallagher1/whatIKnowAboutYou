@@ -1,31 +1,34 @@
-1. Figure out how to make a website lol
-2. Javascript - Find the appropriate packages for getting website data
-    Javascript is needed for the backend implementations of the data scraping.
-        Software
-            OS
-            OS Version
-            Browser Version
-            Vendor
-        Hardware 
-            CPU - DONE
-            Battery - DONE
-            Media Devices
-        Location
-            Continent - DONE
-            Country - DONE
-            State - DONE
-            City - DONE
-        Social Network Accounts - DONE
-            list of website constants - DONE
-            test each social network website for authentication - DONE
-        Network Parameters - DONE
-            
-        Supported Languages - DONE
-        Browser Plugins - DONE
-        Cookies - DONE
-        Clipboard Dump - DONE
+Implement the following and connect to HTML:
+    Software
+        OS
+        OS Version
+        Browser Version
+        Vendor
+    Hardware 
+        CPU - DONE
+        Battery - DONE
+        Media Devices
+    Location
+        Continent - DONE
+        Country - DONE
+        State - DONE
+        City - DONE
+    Social Network Accounts - DONE
+        list of website constants - DONE
+        test each social network website for authentication - DONE
+    Network Parameters - DONE
+        
+    Supported Languages - DONE
+    Browser Plugins - DONE
+    Cookies - DONE
+    Clipboard Dump - DONE
 
+Type us CSS to make it look nice.
 
-3. Implement Javascript code
-4. Figure out how to link it to frontend
-5. Make it look nice ..
+Update (5/04/2020)
+
+For different browsers, certain components are allowed and others arent.
+
+Introduce a check that fixes "undefined" and null cases for the javascript code
+if it can't get the code itself.
+

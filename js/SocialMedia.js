@@ -104,9 +104,13 @@
         var curr = new Image();
         curr.src = network.url;
         curr.onload = function() {
-            var str = '<div>' + network.name + ': verified </div>';
+            var str = '<div style="block_content">' + network.name + ': verified </div>';
             document.getElementById('socialMedia').innerHTML += str;
         }
     });
+
+    if (document.getElementById('socialMedia').innerHTML == "") {
+        document.getElementById('socialMedia').innerHTML = "No Social Media Accounts Verified."
+    }
 
 }());

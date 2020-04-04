@@ -9,6 +9,10 @@
         plugins.innerHTML += str;
     }
 
+    if (plugins.innerHTML == "") {
+        plugins.innerHTML = "No browser plugins currently available."
+    }
+
 
 
 })(); 

@@ -28,26 +28,30 @@
     cpu.innerHTML = 
         "CPU No. of Cores: " + JSON.stringify(window.navigator.hardwareConcurrency) + " cores";
     
-    // RAM: 
-    ram.innerHTML = 
-        "RAM:" + JSON.stringify(window.navigator.deviceMemory) + "GB";
-
+    // RAM:
+    if (window.navigator.deviceMemory != undefined) {
+        ram.innerHTML = 
+            "RAM:" + JSON.stringify(window.navigator.deviceMemory) + "GB";
+    } else {
+        ram.innerHTML = "";
+    }
 
     // Battery:
     navigator.getBattery().then(function(battery) {
         var charge_state = (battery.charging ? "On charge" : "On battery");
-        document.querySelector("#charge_state").innerHTML += charge_state;
+        document.querySelector("#charge_state").innerHTML = "Charging?: " + charge_state;
 
         var level = ((battery.level) * 100) + "%";
-        document.querySelector("#level").textContent += level;
+        document.querySelector("#level").textContent = "Battery Percentage: " + level;
+        console.log(battery);
 
         if (battery.charging) {
             var time = (battery.chargingTime/360);
             var str = "Till Full: " + time + "h";
-            document.querySelector("#time").innerHTML += str;
+            document.querySelector("#time").innerHTML = "Time till 100% Charge: " + str;
         } else {
             var str = "-- Battery Not Charging";
-            document.querySelector("#time").innerHTML += str;
+            document.querySelector("#time").innerHTML = str;
         }
         
     });

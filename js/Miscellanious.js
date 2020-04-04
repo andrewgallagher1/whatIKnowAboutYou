@@ -37,6 +37,10 @@
         
     }());
 
+    if (clipboard.innerHTML == "")
+        clipboard.innerHTML = "No clipboard contents to show."
+
+
     // Media Session(s): Should read the documentation better woops
     // for providing not reading current media -> navigator.mediaSession.
     /*var media = document.getElementById("media");

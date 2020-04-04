@@ -15,6 +15,7 @@ body {
 }
 
 .block {
+    box-sizing: border-box;
     border: 5px black;
     box-shadow: 5px 5px 10px 5px lightgrey;
     width: 450px;

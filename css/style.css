@@ -18,7 +18,7 @@ body {
     box-sizing: border-box;
     border: 5px black;
     box-shadow: 5px 5px 10px 5px lightgrey;
-    width: 450px;
+    width: 600px;
     margin: auto;
     padding: 20px;
     margin: 30px;
@@ -27,7 +27,7 @@ body {
 }
 
 .block_content {
-    width: 100%;
+    width: 450px;
 
 }
 

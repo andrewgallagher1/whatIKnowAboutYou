@@ -5,12 +5,13 @@ body {
 
 .header_div {
     background-color: darkgray;
+    padding: 40px;
 }
 
 .header_title {
     font-weight: normal;
     font-size: xx-large;
-    color: antiquewhite;
+    color: white;
 }
 
 .block {
@@ -19,7 +20,8 @@ body {
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    
+    margin: 30px;
+    background-color: lightgrey;
 }
 
 .sub_heading {

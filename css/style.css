@@ -28,6 +28,7 @@ body {
 
 .block_content {
     width: 450px;
+    max-width: 450px;
 
 }
 

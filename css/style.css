@@ -1,7 +1,8 @@
-body {
-    background-color: black;
+.sub_heading {
+    width: 300px;
+    padding: 50px;
 }
 
-div {
-    color: green;
+.sub_heading_title {
+    font-weight: bold;
 }

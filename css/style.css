@@ -16,6 +16,9 @@ body {
 .block {
     border: 1px black;
     box-shadow: 5px 5px 10px 5px lightgrey;
+    max-width: 600px;
+    margin: auto;
+    
 }
 
 .sub_heading {

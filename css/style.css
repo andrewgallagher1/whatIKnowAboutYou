@@ -3,9 +3,19 @@ body {
    -webkit-font-smooth: antialiased; 
 }
 
+.header_div {
+    background-color: darkgray;
+}
+
 .header_title {
     font-weight: normal;
     font-size: large;
+    color: antiquewhite;
+}
+
+.block {
+    border: 1px black;
+    box-shadow: 5px 5px 10px 5px lightgrey;
 }
 
 .sub_heading {

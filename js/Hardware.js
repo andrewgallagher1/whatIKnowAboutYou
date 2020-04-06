@@ -22,16 +22,26 @@
             "Device Type: " + parser.getDevice().type;
     }
     // CPU:
-    cpuArchitecture.innerHTML =
-        "CPU Architecture: " + parser.getCPU().architecture;
-
+    var cpuArchCheck = parser.getCPU().architecture || "";
+    if (cpuArchCheck == "") {
+        cpuArchitecture.innerHTML = "";
+    } else {
+        cpuArchitecture.innerHTML =
+            "CPU Architecture: " + parser.getCPU().architecture;
+    }
+   
+    var cpuCheck = window.navigator.hardwareConcurrency || "";
+    if (cpuCheck == "") {
+        cpu.innerHTML = "";
+    } else {
     cpu.innerHTML = 
         "CPU No. of Cores: " + JSON.stringify(window.navigator.hardwareConcurrency) + " cores";
-    
+    }
+
     // RAM:
     if (window.navigator.deviceMemory != undefined) {
         ram.innerHTML = 
-            "RAM:" + JSON.stringify(window.navigator.deviceMemory) + "GB";
+            "RAM: " + JSON.stringify(window.navigator.deviceMemory) + "GB";
     } else {
         ram.innerHTML = "";
     }
@@ -46,11 +56,15 @@
         console.log(battery);
 
         if (battery.charging) {
-            var time = (battery.chargingTime/360);
-            var str = "Till Full: " + time + "h";
-            document.querySelector("#time").innerHTML = "Time till 100% Charge: " + str;
+            if (level == "100%") str = "Till Full: Battery at full charge.";
+            else  {
+                var time = (battery.chargingTime/360);
+                var str = "Till Full: " + time + "h";
+            }
+            document.querySelector("#time").innerHTML = str;
+            
         } else {
-            var str = "-- Battery Not Charging";
+            var str = "";
             document.querySelector("#time").innerHTML = str;
         }
         

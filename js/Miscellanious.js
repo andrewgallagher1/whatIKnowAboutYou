@@ -19,27 +19,23 @@
 
     // Clipboard:
     var clipboard = document.getElementById("clipboard");
-    (function(){
-        console.log(navigator.clipboard);
-        if (navigator.clipboard && navigator.clipboard.readText()) navigator.clipboard.readText()
-            .then(contents => {
-                if (contents != "") {
-                    console.log("Clipboard Content:", contents)
-                    clipboard.innerHTML += "Clipboard Content: " + contents
-                } else {
-                    clipboard.innerHTML += "Clipboard Content: Empty"
-                }
-            })
-            .catch(error => {
-                console.log("Clipboard Unavailable", error);
-                clipboard.innerHTML += "Clipboard Content: Unavailable"
-            });
+    
+    console.log(navigator.clipboard);
+    if (navigator.clipboard && navigator.clipboard.readText()) navigator.clipboard.readText()
+        .then(contents => {
+            if (contents != "") {
+                console.log("Clipboard Content:", contents)
+                clipboard.innerHTML = "Clipboard Content: " + contents
+            } else {
+                clipboard.innerHTML = "Clipboard Content: Empty"
+            }
+        })
+        .catch(error => {
+            console.log("Clipboard Unavailable", error);
+            clipboard.innerHTML = "Clipboard Content: Unavailable"
+        });
         
-    }());
-
-    if (clipboard.innerHTML == "")
-        clipboard.innerHTML = "No clipboard contents to show."
-
+    
 
     // Media Session(s): Should read the documentation better woops
     // for providing not reading current media -> navigator.mediaSession.

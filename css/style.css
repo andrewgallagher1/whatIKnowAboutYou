@@ -1,6 +1,7 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   -webkit-font-smooth: antialiased; 
+   -webkit-font-smooth: antialiased;
+   background-color: rgb(230, 230, 230);
 }
 
 .header_div {
@@ -17,12 +18,12 @@ body {
 .block {
     box-sizing: border-box;
     border: 5px black;
-    box-shadow: 5px 5px 10px 5px lightgrey;
+    box-shadow: 2px 2px 4px 2px lightgrey;
     width: 600px;
     margin: auto;
     align-self: center;
     padding: 30px;
-    margin: 30px;
+    margin: 20px auto;
     background-color: rgba(255, 255, 255, 0.945);
 
 }
@@ -30,7 +31,12 @@ body {
 .block_content {
     width: 450px;
     max-width: 450px;
+    font-size: medium;
 
+}
+
+p {
+    text-align: justify;
 }
 
 .sub_heading {

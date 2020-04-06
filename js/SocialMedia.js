@@ -86,19 +86,6 @@
     //         name: "Blogger"
     //     }
 
-    /*function print(msg,color) {
-        document.getElementById('socialMedia').innerHTML += '<div style="color:'+color+';">'+msg + '</div>';
-    }
-    networks.forEach(function(network) {
-        var img = document.createElement('img');
-        img.src = network.url;
-        img.onload = function() {
-            print(network.name + ': logged in','green');
-        };
-        img.onerror = function() {
-           // print(network.name + ': not logged in');
-        };
-    });*/
 
     networks.forEach(function (network) {
         var curr = new Image();

@@ -56,10 +56,10 @@
         console.log(battery);
 
         if (battery.charging) {
-            if (level == "100%") str = "Till Full: Battery at full charge.";
+            if (level == "100%") str = "Time Till Full: Battery at full charge.";
             else  {
                 var time = (battery.chargingTime/360);
-                var str = "Till Full: " + time + "h";
+                var str = "Time Till Full: " + time + "h";
             }
             document.querySelector("#time").innerHTML = str;
             

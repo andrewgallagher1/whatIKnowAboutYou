@@ -97,10 +97,6 @@
                 flag = true;
             }
         });
-
-        if (flag == false) {
-            document.getElementById('socialMedia').innerHTML = "No Social Media Accounts Verified."
-        }
     }());
 
 }());
